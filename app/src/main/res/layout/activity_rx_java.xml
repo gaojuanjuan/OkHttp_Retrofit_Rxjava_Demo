@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.gjj.frame.rxjava.RxJavaActivity">
+
+    <Button
+        android:id="@+id/rxjava_btn1"
+        style="@style/Button_style"
+        android:text="RxJava两种使用方式"/>
+    <Button
+        android:id="@+id/rxjava_btn2"
+        style="@style/Button_style"
+        android:text="RxJava创建操作符的使用"/>
+
+
+
+
+</LinearLayout>
