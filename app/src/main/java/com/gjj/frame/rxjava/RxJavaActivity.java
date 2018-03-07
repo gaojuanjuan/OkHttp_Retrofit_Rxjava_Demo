@@ -10,6 +10,8 @@ import com.gjj.frame.R;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
+import java.util.ArrayList;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Flowable;
@@ -103,44 +105,71 @@ public class RxJavaActivity extends AppCompatActivity {
 
         observable.subscribe(observer);
     }
+
     /**
      * RxJava的使用方式2:基于事件流的链式调用
      */
-    private void useMethod2(){
-        Observable.create(new ObservableOnSubscribe<Integer>() {
-            @Override
-            public void subscribe(ObservableEmitter<Integer> e) throws Exception {
-                e.onNext(1);
-                e.onNext(2);
-                e.onNext(3);
-                e.onComplete();
-            }
-        }).subscribe(new Observer<Integer>() {
+    private void useMethod2() {
+//        Observable.create(new ObservableOnSubscribe<Integer>() {
+//            @Override
+//            public void subscribe(ObservableEmitter<Integer> e) throws Exception {
+//                e.onNext(1);
+//                e.onNext(2);
+//                e.onNext(3);
+//                e.onComplete();
+//            }
+//        })
 
-            //观察者接收事件前，默认最先调用复写onSubscribe()
-            @Override
-            public void onSubscribe(Disposable d) {
-                Logger.e("开始采用subscribe连接");
-            }
+        Observable.error(new RuntimeException()).subscribe(new Observer<Object>() {
+        //观察者接收事件前，默认最先调用复写onSubscribe()
+        @Override
+        public void onSubscribe(Disposable d) {
+            Logger.e("开始采用subscribe连接");
+        }
 
-            //当被观察者产生Next事件&观察者接受到时，会调用该复写方法进行相应
-            @Override
-            public void onNext(Integer value) {
-                Logger.e("对Next事件作出响应" + value);
-            }
+        //当被观察者产生Next事件&观察者接受到时，会调用该复写方法进行相应
+        @Override
+        public void onNext(Object value) {
+            Logger.e("对Next事件作出响应");
+        }
 
-            //当被观察者产生Error事件&观察者接受到时，会调用该复写方法进行相应
-            @Override
-            public void onError(Throwable e) {
-                Logger.e("对Error事件作出响应");
-            }
+        //当被观察者产生Error事件&观察者接受到时，会调用该复写方法进行相应
+        @Override
+        public void onError(Throwable e) {
+            Logger.e("对Error事件作出响应");
+        }
 
-            //当被观察者产生Complete事件&观察者接受到时，会调用该复写方法进行相应
-            @Override
-            public void onComplete() {
-                Logger.e("对Complete事件作出响应");
-            }
+        //当被观察者产生Complete事件&观察者接受到时，会调用该复写方法进行相应
+        @Override
+        public void onComplete() {
+            Logger.e("对Complete事件作出响应");
+        }
         });
     }
 
+//    new Observer<Integer>() {
+//        //观察者接收事件前，默认最先调用复写onSubscribe()
+//        @Override
+//        public void onSubscribe(Disposable d) {
+//            Logger.e("开始采用subscribe连接");
+//        }
+//
+//        //当被观察者产生Next事件&观察者接受到时，会调用该复写方法进行相应
+//        @Override
+//        public void onNext(Integer value) {
+//            Logger.e("对Next事件作出响应" + value);
+//        }
+//
+//        //当被观察者产生Error事件&观察者接受到时，会调用该复写方法进行相应
+//        @Override
+//        public void onError(Throwable e) {
+//            Logger.e("对Error事件作出响应");
+//        }
+//
+//        //当被观察者产生Complete事件&观察者接受到时，会调用该复写方法进行相应
+//        @Override
+//        public void onComplete() {
+//            Logger.e("对Complete事件作出响应");
+//        }
+//    }
 }
