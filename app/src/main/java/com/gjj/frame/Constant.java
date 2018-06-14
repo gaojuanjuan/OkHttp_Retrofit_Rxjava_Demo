@@ -6,4 +6,5 @@ package com.gjj.frame;
 
 public class Constant {
     public static String DOUBIAN_KEY = "fc98744c9a9566dea5530bd15f6e36df";
+    public static final String TAG = "RxJava";
 }
