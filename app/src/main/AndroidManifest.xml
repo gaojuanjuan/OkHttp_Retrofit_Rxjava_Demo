@@ -23,11 +23,13 @@
         <activity android:name=".rxjava.RxJavaActivity" />
         <activity android:name=".rxjava.DeferActivity" />
         <activity android:name=".rxjava.TimerActivity" />
-        <activity android:name=".rxjava.IntervalActivity"></activity>
-        <activity android:name=".rxjava.IntervalRangeActivity">
-
-        </activity>
-        <activity android:name=".rxjava.RangeActivity">
+        <activity android:name=".rxjava.IntervalActivity" />
+        <activity android:name=".rxjava.IntervalRangeActivity" />
+        <activity android:name=".rxjava.RangeActivity" />
+        <activity android:name=".rxjava.MapActivity" />
+        <activity android:name=".rxjava.FlatMapActivity"></activity>
+        <activity android:name=".rxjava.ConcatMapActivity"/>
+        <activity android:name=".rxjava.BufferActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
