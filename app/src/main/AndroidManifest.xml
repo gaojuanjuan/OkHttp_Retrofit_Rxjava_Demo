@@ -13,28 +13,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".rxjava.DeferActivity" />
-        <activity android:name=".rxjava.TimerActivity" />
-        <activity android:name=".rxjava.IntervalActivity" />
-        <activity android:name=".rxjava.IntervalRangeActivity" />
-        <activity android:name=".rxjava.RangeActivity" />
-        <activity android:name=".rxjava.MapActivity" />
-        <activity android:name=".rxjava.FlatMapActivity"></activity>
-        <activity android:name=".rxjava.ConcatMapActivity"/>
-        <activity android:name=".rxjava.BufferActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".rxjava.TestOperatorsActivity">
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
     </application>
 
