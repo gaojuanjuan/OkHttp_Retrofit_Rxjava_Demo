@@ -22,7 +22,8 @@
         <activity android:name=".rxjava.TestOperatorsActivity" />
         <activity android:name=".rxjava.ConditionalPollingActivity" />
         <activity android:name=".rxjava.UnConditionalPollingActivity" />
-        <activity android:name=".rxjava.NestedRequestActivity"></activity>
+        <activity android:name=".rxjava.NestedRequestActivity" />
+        <activity android:name=".rxjava.MergeDataSourceActivity"></activity>
     </application>
 
 </manifest>

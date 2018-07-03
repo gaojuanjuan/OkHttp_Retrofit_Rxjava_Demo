@@ -11,6 +11,8 @@ public interface RequestApi {
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20world")
     Observable<TranslationBean> getCall();
 
+    @GET("ajax.php?a=fy&f=auto&t=auto&w=hi%20china")
+    Observable<TranslationBean1> getCall_2();
 
 
     // 注册请求

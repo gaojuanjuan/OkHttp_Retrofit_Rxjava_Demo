@@ -28,6 +28,11 @@
         style="@style/Button_style"
         android:text="网络请求嵌套回调"/>
 
+    <Button
+        android:id="@+id/btn_merge_data_source"
+        style="@style/Button_style"
+        android:text="合并数据源，同时展示"/>
+
 
 
 
