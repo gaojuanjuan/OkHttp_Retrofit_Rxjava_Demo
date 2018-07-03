@@ -23,6 +23,11 @@
         style="@style/Button_style"
         android:text="网络请求轮询（有条件）"/>
 
+    <Button
+        android:id="@+id/btn_nested_request"
+        style="@style/Button_style"
+        android:text="网络请求嵌套回调"/>
+
 
 
 

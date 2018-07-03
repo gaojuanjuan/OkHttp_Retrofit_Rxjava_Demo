@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.gjj.frame.bean.JokesBean;
 import com.gjj.frame.rxjava.ConditionalPollingActivity;
+import com.gjj.frame.rxjava.NestedRequestActivity;
 import com.gjj.frame.rxjava.UnConditionalPollingActivity;
 
 import java.io.IOException;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.rxjava_btn,R.id.logger_btn,R.id.btn_conditional_poll})
+    @OnClick({R.id.rxjava_btn,R.id.logger_btn,R.id.btn_conditional_poll,R.id.btn_nested_request})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rxjava_btn:
@@ -94,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_conditional_poll:
                 mIntent = new Intent(MainActivity.this, ConditionalPollingActivity.class);
+                break;
+            case R.id.btn_nested_request:
+                mIntent = new Intent(MainActivity.this, NestedRequestActivity.class);
                 break;
             case R.id.logger_btn:
                 //测试okhttp的日志拦截器
