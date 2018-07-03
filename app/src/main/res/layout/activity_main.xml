@@ -16,11 +16,15 @@
     <Button
         android:id="@+id/rxjava_btn"
         style="@style/Button_style"
-        android:text="RxJava的的实例"/>
+        android:text="网络请求轮询（无条件）"/>
+
     <Button
-        android:id="@+id/retrofit_btn"
+        android:id="@+id/btn_conditional_poll"
         style="@style/Button_style"
-        android:text="Retrofit的的实例"/>
+        android:text="网络请求轮询（有条件）"/>
+
+
+
 
 
 </LinearLayout>

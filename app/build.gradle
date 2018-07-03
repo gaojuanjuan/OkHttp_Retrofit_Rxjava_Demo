@@ -33,10 +33,19 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:27.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //Android 支持Retrofit
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    //支持Gson解析
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //Android 支持RxJava
     compile 'io.reactivex.rxjava2:rxjava:2.0.1'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //衔接Retrofit 和 RxJava的
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
     compile 'com.jakewharton:butterknife:8.8.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'

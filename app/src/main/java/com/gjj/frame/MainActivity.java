@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.gjj.frame.bean.JokesBean;
-import com.gjj.frame.rxjava.RxJavaActivity;
+import com.gjj.frame.rxjava.ConditionalPollingActivity;
+import com.gjj.frame.rxjava.UnConditionalPollingActivity;
 
 import java.io.IOException;
 
@@ -85,13 +86,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.rxjava_btn, R.id.retrofit_btn,R.id.logger_btn})
+    @OnClick({R.id.rxjava_btn,R.id.logger_btn,R.id.btn_conditional_poll})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rxjava_btn:
-                mIntent = new Intent(MainActivity.this, RxJavaActivity.class);
+                mIntent = new Intent(MainActivity.this, UnConditionalPollingActivity.class);
                 break;
-            case R.id.retrofit_btn:
+            case R.id.btn_conditional_poll:
+                mIntent = new Intent(MainActivity.this, ConditionalPollingActivity.class);
                 break;
             case R.id.logger_btn:
                 //测试okhttp的日志拦截器

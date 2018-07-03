@@ -12,16 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".rxjava.TestOperatorsActivity">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-        </activity>
+        <activity android:name=".rxjava.TestOperatorsActivity" />
+        <activity android:name=".rxjava.ConditionalPollingActivity" />
+        <activity android:name=".rxjava.UnConditionalPollingActivity" />
+        <activity android:name=".rxjava.NestedRequestActivity"></activity>
     </application>
 
 </manifest>
