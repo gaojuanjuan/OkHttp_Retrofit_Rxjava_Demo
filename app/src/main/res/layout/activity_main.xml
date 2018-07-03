@@ -38,6 +38,12 @@
         style="@style/Button_style"
         android:text="从磁盘/内存缓存中获取缓存数据"/>
 
+    <Button
+        android:id="@+id/btn_joint_judgment"
+        style="@style/Button_style"
+        android:text="联合判断"/>
+
+
 
 
 

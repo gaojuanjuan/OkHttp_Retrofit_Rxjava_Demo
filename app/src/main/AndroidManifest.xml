@@ -24,7 +24,9 @@
         <activity android:name=".rxjava.UnConditionalPollingActivity" />
         <activity android:name=".rxjava.NestedRequestActivity" />
         <activity android:name=".rxjava.MergeDataSourceActivity" />
-        <activity android:name=".rxjava.DisksAndMemoryActivity"></activity>
+        <activity android:name=".rxjava.DisksAndMemoryActivity" />
+        <activity android:name=".rxjava.JointJudgmentActivity" />
+        <activity android:name=".rxjava.RequestRetryActivity"></activity>
     </application>
 
 </manifest>
