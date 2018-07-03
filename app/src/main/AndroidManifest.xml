@@ -23,7 +23,8 @@
         <activity android:name=".rxjava.ConditionalPollingActivity" />
         <activity android:name=".rxjava.UnConditionalPollingActivity" />
         <activity android:name=".rxjava.NestedRequestActivity" />
-        <activity android:name=".rxjava.MergeDataSourceActivity"></activity>
+        <activity android:name=".rxjava.MergeDataSourceActivity" />
+        <activity android:name=".rxjava.DisksAndMemoryActivity"></activity>
     </application>
 
 </manifest>
