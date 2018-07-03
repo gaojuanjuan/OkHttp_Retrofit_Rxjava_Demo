@@ -43,6 +43,11 @@
         style="@style/Button_style"
         android:text="联合判断"/>
 
+    <Button
+        android:id="@+id/btn_request_retry"
+        style="@style/Button_style"
+        android:text="网络请求重试"/>
+
 
 
 

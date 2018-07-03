@@ -13,6 +13,7 @@ import com.gjj.frame.rxjava.DisksAndMemoryActivity;
 import com.gjj.frame.rxjava.JointJudgmentActivity;
 import com.gjj.frame.rxjava.MergeDataSourceActivity;
 import com.gjj.frame.rxjava.NestedRequestActivity;
+import com.gjj.frame.rxjava.RequestRetryActivity;
 import com.gjj.frame.rxjava.UnConditionalPollingActivity;
 
 import java.io.IOException;
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.rxjava_btn,R.id.logger_btn,R.id.btn_conditional_poll,
             R.id.btn_nested_request,R.id.btn_merge_data_source,R.id.btn_memory_disk,
-            R.id.btn_joint_judgment})
+            R.id.btn_joint_judgment,R.id.btn_request_retry})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rxjava_btn:
@@ -112,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_joint_judgment:
                 mIntent = new Intent(MainActivity.this, JointJudgmentActivity.class);
+                break;
+            case R.id.btn_request_retry:
+                mIntent = new Intent(MainActivity.this, RequestRetryActivity.class);
                 break;
             case R.id.logger_btn:
                 //测试okhttp的日志拦截器
